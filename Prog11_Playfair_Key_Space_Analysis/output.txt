@@ -1,0 +1,30 @@
+====================================================
+ CSA5117 - PROGRAM 11: PLAYFAIR KEY SPACE ANALYSIS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PART 1: Total Possible Keys (ignoring equivalences)]
+  Calculation: 25! (permutations of 25 distinct matrix cells)
+  Exact Value : 15511210043330986055303168
+  Scientific  : 1.5511e+25
+  Power of 2  : 2^(83.68)  =>  Approximately 2^84 keys
+
+[PART 2: Effectively Unique Keys (accounting for symmetries)]
+  Reasoning:
+    - Circular shift of all 5 rows leaves relative digraphs invariant (5 shifts).
+    - Circular shift of all 5 columns leaves relative digraphs invariant (5 shifts).
+    - Total symmetric equivalent configurations per key = 5 x 5 = 25.
+  Effective Keys = 25! / 25 = 24!
+  Exact Value    : 620448401733239409999872
+  Scientific     : 6.2045e+23
+  Power of 2     : 2^(79.04)  =>  Approximately 2^79 keys
+
+Summary Comparison:
+  +--------------------------------+--------------------+------------+
+  | Key Category                   | Count (Decimal)    | Power of 2 |
+  +--------------------------------+--------------------+------------+
+  | Total Theoretical Matrix Keys  | 1.5511 x 10^25     | 2^83.68    |
+  | Effectively Unique Cipher Keys | 6.2045 x 10^23     | 2^79.04    |
+  +--------------------------------+--------------------+------------+
+
+Result: [ANALYSIS COMPLETE - 2^84 theoretical vs 2^79 effective unique keys]

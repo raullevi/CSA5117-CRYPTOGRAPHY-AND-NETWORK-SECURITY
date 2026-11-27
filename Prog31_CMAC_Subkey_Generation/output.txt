@@ -1,0 +1,28 @@
+====================================================
+ CSA5117 - PROGRAM 31: CMAC SUBKEY GENERATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PART A: Required Reduction Constants]
+  1. For 64-bit block size (DES/3DES):
+     Constant R_64  = 0x000000000000001B
+     Irreducible Polynomial: P_64(x) = x^64 + x^4 + x^3 + x + 1
+
+  2. For 128-bit block size (AES):
+     Constant R_128 = 0x00000000000000000000000000000087
+     Irreducible Polynomial: P_128(x) = x^128 + x^7 + x^2 + x + 1
+
+[PART B: Mathematical Mechanism of Shift and XOR]
+  - In Galois Field GF(2^b), field elements are polynomials of degree < b.
+  - Multiplying a polynomial by x shifts all coefficients to the left by 1.
+  - If the leading coefficient (MSB) was 1, multiplying by x yields degree b,
+    which exceeds the field representation. We must reduce modulo P(x).
+  - Since x^b = P(x) - x^b = R_b in GF(2), replacing the overflow with R_b
+    is accomplished by discarding the overflow bit and XORing with constant R_b.
+
+[DEMONSTRATION: 64-bit CMAC Subkey Derivation]
+  L  = E_K(0^64) = 0x8A5B3C2D1E0F4A6C (MSB = 1)
+  K1 = (L << 1) ^ R_64 = 0x14B6785A3C1E94C3
+  K2 = (K1 << 1) ^ ... = 0x296CF0B4783D2986
+
+Result: [CMAC SUBKEY GENERATION ALGORITHM FULLY PROVEN]

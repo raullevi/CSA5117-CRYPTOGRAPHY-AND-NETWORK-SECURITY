@@ -1,0 +1,26 @@
+====================================================
+ CSA5117 - PROGRAM 19: 3DES IN CBC MODE EVALUATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Encrypting 3 Blocks with 3DES-CBC:
+  Block 1: Plain=0x48656C6C6F20576F -> Cipher=0x414B254F660E9E44
+  Block 2: Plain=0x726C642033444553 -> Cipher=0x9BBBCB98B9921524
+  Block 3: Plain=0x20434243204D6F64 -> Cipher=0x1364032C7507B473
+
+[+] Decrypting with 3DES-CBC:
+  Block 1: Decrypted=0x48656C6C6F20576F [MATCH]
+  Block 2: Decrypted=0x726C642033444553 [MATCH]
+  Block 3: Decrypted=0x20434243204D6F64 [MATCH]
+
+[PART A: Architectural Evaluation - Security]
+Choice: 3DES (3-Key EDE) with CBC mode.
+Reason: 168-bit key length provides 112-bit effective security against meet-in-the-middle
+        attacks; CBC prevents identical plaintext blocks from yielding identical cipher blocks.
+
+[PART B: Architectural Evaluation - Performance]
+Choice: Single DES or AES-128 in CTR/CBC mode.
+Reason: 3DES requires 48 Feistel rounds per 64-bit block (3x more operations than DES),
+        making it significantly slower and inefficient for high-throughput network streams.
+
+Result: [3DES-CBC ENCRYPTION/DECRYPTION AND TRADEOFF ANALYSIS COMPLETE]

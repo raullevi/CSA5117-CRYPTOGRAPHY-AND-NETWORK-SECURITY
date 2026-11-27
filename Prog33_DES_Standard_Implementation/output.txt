@@ -1,0 +1,12 @@
+====================================================
+ CSA5117 - PROGRAM 33: FULL DES IMPLEMENTATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] 56-Bit Effective Key: 0x133457799BBCDFF1
+[+] 64-Bit Plaintext    : 0x0123456789ABCDEF
+
+[+] 64-Bit Ciphertext   : 0x2D3E59A7F327BB6E
+[+] Decrypted Plaintext : 0x0123456789ABCDEF
+
+Result: [DES ENCRYPTION AND DECRYPTION VERIFIED MATCH]

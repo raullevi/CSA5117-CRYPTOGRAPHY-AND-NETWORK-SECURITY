@@ -1,0 +1,24 @@
+====================================================
+ CSA5117 - PROGRAM 30: CBC-MAC EXTENSION ATTACK
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[STEP 1: Legitimate One-Block Message]
+  Message Block X1 = 0x12345678
+  Authentic Tag  T = MAC(K, X1) = 0x8290B69C
+
+[STEP 2: Adversary Constructs Two-Block Message Without Key]
+  Forged Block 1: X           = 0x12345678
+  Forged Block 2: X ^ T       = 0x90A4E0E4
+
+[STEP 3: Receiver Verifies MAC of Forged Message]
+  Computed Tag for Forged Message: 0x8290B69C
+  Target Tag Predicted by Attacker: 0x8290B69C
+
+Security Verdict:
+  TAGS MATCH EXACTLY! FORGERY SUCCESSFUL!
+  Adversary produced a valid MAC for a new message M without knowing key K.
+  This proves basic CBC-MAC is insecure for variable-length messages.
+  Mitigation: Use CMAC or include message length in block 1.
+
+Result: [CBC-MAC EXTENSION FORGERY MATHEMATICALLY VERIFIED]

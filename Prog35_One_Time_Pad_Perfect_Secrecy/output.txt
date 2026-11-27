@@ -1,0 +1,27 @@
+====================================================
+ CSA5117 - PROGRAM 35: ONE-TIME PAD PERFECT SECRECY
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Step 1: Encryption with Random Keystream
+Plaintext : ATTACKATDAWN
+Keystream : 3 19 5 22 11 8 14 2 20 7 15 1 
+Ciphertext: DMYWNSOVXHLO
+
+[+] Step 2: Perfect Secrecy Demonstration (Shannon Equi-Probability)
+Given Ciphertext "DMYWNSOVXHLO", an adversary tests different possible plaintexts:
+
+  Hypothetical Plaintext: "DONOTSTRIKE"
+  Required Valid Keystream: 0 24 11 8 20 0 21 4 15 23 7 1 (Equally Probable: P(K) = 1/26^12)
+
+  Hypothetical Plaintext: "RETREATATSIX"
+  Required Valid Keystream: 12 8 5 5 9 18 21 21 4 15 3 17 (Equally Probable: P(K) = 1/26^12)
+
+  Hypothetical Plaintext: "ATTACKATDAWN"
+  Required Valid Keystream: 3 19 5 22 11 8 14 2 20 7 15 1 (Equally Probable: P(K) = 1/26^12)
+
+Theoretical Proof:
+  H(M | C) = H(M) -> Conditional entropy equals unconditioned entropy.
+  Intercepting the ciphertext yields zero information about the true plaintext.
+
+Result: [PERFECT SECRECY MATHEMATICALLY DEMONSTRATED]

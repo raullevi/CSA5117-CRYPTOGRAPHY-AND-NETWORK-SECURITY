@@ -1,0 +1,38 @@
+====================================================
+ CSA5117 - PROGRAM 06: AFFINE CIPHER CRYPTANALYSIS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[Given Ciphertext Frequency Data]
+Most frequent ciphertext letter    : 'B' -> Value = 1
+2nd Most frequent ciphertext letter: 'U' -> Value = 20
+
+[English Language Frequencies]
+1st Most frequent English letter    : 'E' -> Value = 4
+2nd Most frequent English letter    : 'T' -> Value = 19
+
+[Mathematical Formulation]
+  (1)  4*a + b =  1 (mod 26)   [E -> B]
+  (2) 19*a + b = 20 (mod 26)   [T -> U]
+
+Subtracting (1) from (2):
+  15*a = 19 (mod 26)
+Multiplicative inverse of 15 mod 26: 7
+
+[Recovered Key Parameters]
+  Multiplier 'a' = 3
+  Shift      'b' = 15
+  Decryption Multiplier a^-1 = 9
+
+[Verification of Recovered Key]
+  E(E = 4)  = (3 * 4 + 15) mod 26  = 1 -> 'B' [MATCH 'B']
+  E(T = 19) = (3 * 19 + 15) mod 26 = 20 -> 'U' [MATCH 'U']
+
+Decrypting test sequence "BUBBU":
+  'B' (1) -> 'E' (4)
+  'U' (20) -> 'T' (19)
+  'B' (1) -> 'E' (4)
+  'B' (1) -> 'E' (4)
+  'U' (20) -> 'T' (19)
+
+Result: [KEY SUCCESSFULLY RECOVERED: a = 3, b = 15]

@@ -1,0 +1,31 @@
+====================================================
+ CSA5117 - PROGRAM 40: MONOALPHABETIC ATTACK EVALUATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Target Ciphertext: GSV JFRXP YILDM ULC QFNKH LEVI GSV OZAB WLT ZMW IFMH ZDZB ZXIVHH GSV URVOW
+
+[+] Top Observed Frequencies in Ciphertext:
+    'V': 6   'Z': 5   'H': 4   'I': 4   'L': 4   'G': 3   'S': 3   
+
+[+] TOP 10 CANDIDATE PLAINTEXTS IN ROUGH ORDER OF LIKELIHOOD:
+--------------------------------------------------------------------------------
+Rank | Likelihood Score | Decrypted Text Candidate
+--------------------------------------------------------------------------------
+   1 |       98.2%       | NSE BDMFJ ZOIWR CIY XDGVA IPEO NSE UTKL HIQ TRH ODRA TWTL TFOEAA NSE CMEUH
+   2 |       91.4%       | HRA KCFYQ TNSGL MSB ZCPJI SVAN HRA WOXU DSE OLD NCLI OGOU OYNAII HRA MFAWD
+   3 |       84.6%       | DLI XMYBE OHRPU FRK TMVQS RJIH DLI GNZW CRA NUC HMUS NPNW NBHISS DLI FYIGC
+   4 |       77.8%       | CUS ZFBKA NDLVW YLX OFJER LQSD CUS PHTG MLI HWM DFWR HVHG HKDSRR CUS YBSPM
+   5 |       71.0%       | MWR TYKXI HCUJG BUZ NYQAL UERC MWR VDOP FUS DGF CYGL DJDP DXCRLL MWR BKRVF
+   6 |       64.2%       | FGL OBXZS DMWQP KWT HBEIU WALM FGL JCNV YWR CPY MBPU CQCV CZMLUU FGL KXLJY
+   7 |       57.4%       | YPU NKZTR CFGEV XGO DKASW GIUF YPU QMHJ BGL MVB FKVW MEMJ MTFUWW YPU XZUQB
+   8 |       50.6%       | BVW HXTOL MYPAJ ZPN CXIRG PSWY BVW EFDQ KPU FJK YXJG FAFQ FOYWGG BVW ZTWEK
+   9 |       43.8%       | KJG DZONU FBVIQ TVH MZSLP VRGB KJG AYCE XVW YQX BZQP YIYE YNBGPP KJG TOGAX
+  10 |       37.0%       | XQP CTNHW YKJSE OJD FTRUV JLPK XQP IBMA ZJG BEZ KTEV BSBA BHKPVV XQP ONPIZ
+--------------------------------------------------------------------------------
+
+[STATISTICAL EVALUATION NOTE]
+As ciphertext length N -> infinity, unigram distributions converge strictly to the
+true English language frequencies, allowing 100% autonomous decryption.
+
+Result: [EVALUATION COMPLETE - TOP 10 PLAINTEXTS GENERATED]

@@ -1,0 +1,23 @@
+====================================================
+ CSA5117 - PROGRAM 21: BLOCK CIPHER PADDING MOTIVATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[CASE 1: Incomplete Block (5 Bytes Input)]
+Original Data (5 bytes): 11 22 33 44 55 
+Padded Block  (8 bytes): 11 22 33 44 55 80 00 00 
+Depadded Data (5 bytes): 11 22 33 44 55 
+Status: [UNAMBIGUOUS RECOVERY]
+
+[CASE 2: Complete Block (8 Bytes Input - Exact Multiple)]
+Original Data (8 bytes, ends in 0x80): AA BB CC DD EE FF 00 80 
+Padded Output (16 bytes, extra block): AA BB CC DD EE FF 00 80 80 00 00 00 00 00 00 00 
+Depadded Data (8 bytes recovered):     AA BB CC DD EE FF 00 80 
+Status: [CORRECT RECOVERY WITHOUT TRUNCATION]
+
+[ARCHITECTURAL MOTIVATION ANSWER]
+If an extra dummy padding block was NOT added when message is already a multiple
+of block size, any legitimate data ending in bytes like 0x80 0x00 would be mistakenly
+stripped during unpadding! Adding the extra block guarantees deterministic parsing.
+
+Result: [PADDING NECESSITY MATHEMATICALLY PROVEN]

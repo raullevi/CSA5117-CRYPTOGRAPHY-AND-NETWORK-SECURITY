@@ -1,0 +1,24 @@
+====================================================
+ CSA5117 - PROGRAM 39: ADDITIVE CIPHER TOP 10 ATTACK
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Input Ciphertext: LIPPS ASVPH GVCTXSKVETLC WIGYVMXC
+
+[+] TOP 10 MOST LIKELY PLAINTEXTS:
+--------------------------------------------------------------------------------
+Rank | Shift Key | Chi-Sq Metric | Candidate Plaintext
+--------------------------------------------------------------------------------
+   1 |    k=04   |        28.46  | HELLO WORLD CRYPTOGRAPHY SECURITY
+   2 |    k=15   |        75.37  | WTAAD LDGAS RGNEIDVGPEWN HTRJGXIN
+   3 |    k=17   |       104.23  | URYYB JBEYQ PELCGBTENCUL FRPHEVGL
+   4 |    k=08   |       139.21  | DAHHK SKNHZ YNULPKCNWLDU OAYQNEPU
+   5 |    k=01   |       150.43  | KHOOR ZRUOG FUBSWRJUDSKB VHFXULWB
+   6 |    k=13   |       158.35  | YVCCF NFICU TIPGKFXIRGYP JVTLIZKP
+   7 |    k=00   |       167.72  | LIPPS ASVPH GVCTXSKVETLC WIGYVMXC
+   8 |    k=10   |       178.16  | BYFFI QILFX WLSJNIALUJBS MYWOLCNS
+   9 |    k=23   |       204.87  | OLSSV DVYSK JYFWAVNYHWOF ZLJBYPAF
+  10 |    k=11   |       217.82  | AXEEH PHKEW VKRIMHZKTIAR LXVNKBMR
+--------------------------------------------------------------------------------
+
+Result: [CORRECT SHIFT IDENTIFIED AS RANK 1]

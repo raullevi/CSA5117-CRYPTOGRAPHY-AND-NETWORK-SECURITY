@@ -1,0 +1,27 @@
+====================================================
+ CSA5117 - PROGRAM 25: RSA COMMON FACTOR ATTACK
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[TARGET SYSTEM]
+  Public Modulus n = 3233
+  Public Exp     e = 17
+
+[ATTACK EXECUTION]
+  Vulnerable Plaintext P = 183 (shares factor with n)
+  Observed Ciphertext  C = 1586
+
+  Attacker computes: gcd(C, n)...
+  Recovered Prime p = gcd(1586, 3233) = 61
+  Recovered Prime q = n / p = 3233 / 61 = 53
+
+[PRIVATE KEY EXFILTRATION]
+  phi(n) = (61 - 1) * (53 - 1) = 3120
+  Attacker-Calculated Private Key d = 2753
+
+Answer to Question:
+  YES, IT COMPLETELY BREAKS THE ENTIRE CRYPTOSYSTEM!
+  Computing gcd(C, n) directly factors n in O(log n) steps, yielding p and q,
+  which allows immediate derivation of the victim's private key d.
+
+Result: [COMMON FACTOR VULNERABILITY DEMONSTRATED WITH FULL KEY EXFILTRATION]

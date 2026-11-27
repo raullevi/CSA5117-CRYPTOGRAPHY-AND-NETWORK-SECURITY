@@ -1,0 +1,21 @@
+====================================================
+ CSA5117 - PROGRAM 38: HILL CIPHER CHOSEN PLAINTEXT ATTACK
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[ATTACK MODEL: CHOSEN PLAINTEXT ORACLE]
+Attacker sends chosen basis vectors to encryption black box:
+
+[+] Step 1: Query Oracle with Basis Vector e1 = (1, 0) ['BA']
+    Oracle returns: C1 = (9, 4)
+    Mathematical fact: (1, 0) * K = (K00, K01) -> Key Row 0: [9, 4]
+
+[+] Step 2: Query Oracle with Basis Vector e2 = (0, 1) ['AB']
+    Oracle returns: C2 = (5, 7)
+    Mathematical fact: (0, 1) * K = (K10, K11) -> Key Row 1: [5, 7]
+
+[+] Step 3: Extracted Secret Key Matrix K:
+    K = [[ 9, 4 ], [ 5, 7 ]]
+
+Verification: [KEY MATRIX CRACKED EXACTLY WITH ZERO COMPUTATION]
+Result: [CHOSEN PLAINTEXT ATTACK DEMONSTRATED TOTAL BREAK OF HILL CIPHER]

@@ -1,0 +1,24 @@
+====================================================
+ CSA5117 - PROGRAM 37: AUTOMATED MONOALPHABETIC SOLVER
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Input Ciphertext: KHOOR ZRUOG WKLV LV DQ DXWRPDWHG IUHTXHQFB DQDOBVLV GHFRGHU WHVW
+
+[+] TOP 10 RANKED CANDIDATE PLAINTEXTS (Automated Solver Output):
+--------------------------------------------------------------------------------
+Rank | Confidence | Decrypted Candidate Plaintext
+--------------------------------------------------------------------------------
+   1 |    96.5%   | CENNI GIHNS TCRO RO AD AMTIFATES YHEWMEDUL ADANLORO SEUISEH TEOT
+   2 |    89.3%   | WORRH BHLRD IWCS CS NU NGIHPNIOD VLOYGOUFM NUNRMSCS DOFHDOL IOSI
+   3 |    82.1%   | YSCCL JLMCU HYWD WD RF RBHLKRHSU XMSVBSFPG RFRCGDWD USPLUSM HSDH
+   4 |    74.9%   | VDWWM ZMGWF LVYU YU CP CJLMQCLDF EGDXJDPKB CPCWBUYU FDKMFDG LDUL
+   5 |    67.7%   | XUYYG AGBYP MXVF VF WK WZMGTWMUP OBUEZUKQJ WKWYJFVF PUQGPUB MUFM
+   6 |    60.5%   | EFVVB NBJVK GEXP XP YQ YAGBIYGFK SJFOAFQTZ YQYVZPXP KFTBKFJ GFPG
+   7 |    53.3%   | OPXXJ RJZXQ BOEK EK VT VNBJHVBPQ DZPSNPTIA VTVXAKEK QPIJQPZ BPKB
+   8 |    46.1%   | SKEEZ CZAET JSOQ OQ XI XRJZLXJKT UAKDRKIHN XIXENQOQ TKHZTKA JKQJ
+   9 |    38.9%   | DQOOA WANOI ZDST ST EH ECZAMEZQI FNQUCQHLR EHEORTST IQLAIQN ZQTZ
+  10 |    31.7%   | UTSSN YNRSH AUDI DI OL OWANGOATH PRTFWTLMC OLOSCIDI HTMNHTR ATIA
+--------------------------------------------------------------------------------
+
+Result: [TOP 10 PLAINTEXTS PRODUCED WITHOUT HUMAN INTERVENTION]

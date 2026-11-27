@@ -1,0 +1,17 @@
+====================================================
+ CSA5117 - PROGRAM 14: ONE-TIME PAD VIGENERE CIPHER
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PART A: Encrypt 'send more money']
+Plaintext 1 : sendmoremoney
+Key Stream  : 9 0 1 7 23 15 21 14 11 11 2 8 9 
+Ciphertext  : B E O K J D M S X Z P M H (BEOKJDMSXZPMH)
+
+[PART B: Find Key to Decrypt Ciphertext to 'cash not needed']
+Target Plaintext : cashnotneeded
+Calculated Key 2 : 25 4 22 3 22 15 19 5 19 21 12 8 4 
+
+[Verification: Decrypting Ciphertext using Key 2]
+Decrypted with Key 2: cashnotneeded
+Result: [SUCCESS - PERFECT SECRECY PROPERTY DEMONSTRATED]

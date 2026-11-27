@@ -1,0 +1,24 @@
+====================================================
+ CSA5117 - PROGRAM 32: DSA VS RSA SIGNATURE RANDOMNESS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PART 1: Implications of Randomized vs Deterministic Signatures]
+  1. Privacy & Unlinkability:
+     - Deterministic RSA reveals when the exact same message is signed twice.
+     - Randomized DSA produces different signatures every time, preserving unlinkability.
+  2. Nonce Fragility:
+     - RSA requires NO random number generator during signing.
+     - DSA critically relies on a cryptographically secure RNG. If the nonce 'k'
+       is repeated or predictable, the SIGNER'S PRIVATE KEY IS EXPOSED!
+
+[PART 2: Catastrophic Private Key Recovery Attack (Nonce Reuse)]
+Signer generates two signatures with same reused nonce k = 17:
+  Sig 1: (r = 23, s1 = 66) for Message Hash 55
+  Sig 2: (r = 23, s2 = 14) for Message Hash 80
+
+Attacker intercepts both signatures and mounts nonce recovery:
+  Cracked Nonce k = (H1 - H2) * (s1 - s2)^-1 mod q = 17
+  Cracked Private Key x = (s1*k - H1) * r^-1 mod q = 42
+
+Result: [PRIVATE KEY CRACKED 100% - NONCE REUSE PROVEN FATAL]

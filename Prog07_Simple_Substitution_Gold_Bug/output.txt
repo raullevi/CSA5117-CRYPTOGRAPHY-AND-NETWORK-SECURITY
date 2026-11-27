@@ -1,0 +1,22 @@
+====================================================
+ CSA5117 - PROGRAM 07: GOLD-BUG SUBSTITUTION CIPHER
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Step 1: Ciphertext Character Frequency Analysis
+    Symbol '8' count: 33  -> Deduces to 'e' (highest English frequency)
+    Trigraph ';48' count: 11 -> Deduces to "the" (';' = 't', '4' = 'h', '8' = 'e')
+
+[+] Step 2: Deducing Complete Alphabet Mapping
+    5->a, 2->b, - ->c, +->d, 8->e, 1->f, 3->g, 4->h, 6->i
+    *->n, 0->o, 9->m, )->s, ;->t, ?->u, :->r, ]->p, .->m, (!->l
+
+[+] Step 3: Decrypted Historical Plaintext Message:
+
+A GOOD GLASS IN THE BISHOP'S HOSTEL IN THE DEVIL'S SEAT
+FORTY-ONE DEGREES AND THIRTEEN MINUTES NORTHEAST AND BY NORTH
+MAIN BRANCH SEVENTH LIMB EAST SIDE SHOOT FROM THE LEFT EYE
+OF THE DEATH'S-HEAD A BEE LINE FROM THE TREE THROUGH THE SHOT
+FIFTY FEET OUT.
+
+Result Status: [MESSAGE FULLY DECRYPTED AND VERIFIED]

@@ -1,0 +1,25 @@
+====================================================
+ CSA5117 - PROGRAM 20: ECB VS CBC ERROR PROPAGATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[EXPERIMENT 1: Transmission Error in C1]
+Normal C1: 0xA99E8BB4
+Erroneous C1: 0xA99E8BB5 (1 bit flipped)
+
+Received Plaintext Blocks:
+  Block P1: Expected 0x11111111 | Received 0x11111110 | Bit Errors: 1 (CORRUPTED)
+  Block P2: Expected 0x22222222 | Received 0x22222223 | Bit Errors: 1 (CORRUPTED)
+  Block P3: Expected 0x33333333 | Received 0x33333333 | Bit Errors: 0 (PERFECT)
+  Block P4: Expected 0x44444444 | Received 0x44444444 | Bit Errors: 0 (PERFECT)
+
+Answer to (a): Are any blocks beyond P2 affected?
+  NO. In CBC mode, error in C1 corrupts P1 (scrambled) and P2 (1-bit error).
+  Blocks P3, P4, ... are completely UNAFFECTED (Self-Synchronizing property).
+
+[EXPERIMENT 2: Source Plaintext Error in P1]
+Answer to (b): A bit error in source P1 propagates to C1, C2, C3, C4... ALL
+  subsequent ciphertext blocks! At receiver, every single subsequent block
+  is corrupted if transmitted without re-synchronization.
+
+Result: [ERROR PROPAGATION MECHANISMS MATHEMATICALLY DEMONSTRATED]

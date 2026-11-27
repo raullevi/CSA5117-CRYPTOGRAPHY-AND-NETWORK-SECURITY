@@ -1,0 +1,19 @@
+====================================================
+ CSA5117 - PROGRAM 22: S-DES IN CBC MODE
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Key : 0111111101 | Subkeys: K1 = 0x5F, K2 = 0xFC
+[+] IV  : 10101010 (0xAA)
+
+[+] CBC Encryption:
+  Plaintext Block 1: 00000001 (0x01)
+  Ciphertext Block 1: 11110100 (0xF4) [Expected: 11110100]
+  Plaintext Block 2: 00100011 (0x23)
+  Ciphertext Block 2: 00001011 (0x0B) [Expected: 00001011]
+
+[+] CBC Decryption:
+  Recovered Block 1: 00000001 (0x01) [MATCH]
+  Recovered Block 2: 00100011 (0x23) [MATCH]
+
+Result: [S-DES CBC ENCRYPTION & DECRYPTION FULLY VERIFIED]

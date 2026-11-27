@@ -1,0 +1,49 @@
+====================================================
+ CSA5117 - PROGRAM 17: DES DECRYPTION KEY SCHEDULE
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Step 1: Forward Encryption Key Schedule (Circular Left Shifts)
+Round | Left Shift | C_i (28-bit) | D_i (28-bit)
+------------------------------------------------
+  1   |     1      |  0x1E1E1E0   |  0x1555554
+  2   |     1      |  0x3C3C3C0   |  0x2AAAAA8
+  3   |     2      |  0xF0F0F00   |  0xAAAAAA0
+  4   |     2      |  0xC3C3C03   |  0xAAAAA82
+  5   |     2      |  0x0F0F00F   |  0xAAAAA0A
+  6   |     2      |  0x3C3C03C   |  0xAAAA82A
+  7   |     2      |  0xF0F00F0   |  0xAAAA0AA
+  8   |     2      |  0xC3C03C3   |  0xAAA82AA
+  9   |     1      |  0x8780787   |  0x5550555
+ 10   |     2      |  0x1E01E1E   |  0x5541555
+ 11   |     2      |  0x7807878   |  0x5505555
+ 12   |     2      |  0xE01E1E1   |  0x5415555
+ 13   |     2      |  0x8078787   |  0x5055555
+ 14   |     2      |  0x01E1E1E   |  0x4155555
+ 15   |     2      |  0x0787878   |  0x0555555
+ 16   |     1      |  0x0F0F0F0   |  0x0AAAAAA
+
+[+] Step 2: Reverse Decryption Key Schedule (Circular Right Shifts)
+Starting state for decryption: (C16, D16) = (0x0F0F0F0, 0x0AAAAAA)
+
+Dec Round | Right Shift | Dec C_i   | Expected C_(17-i) | Status
+----------------------------------------------------------------
+    1     |      0      | 0x0F0F0F0 |     0x0F0F0F0      | VERIFIED
+    2     |      1      | 0x0787878 |     0x0787878      | VERIFIED
+    3     |      2      | 0x01E1E1E |     0x01E1E1E      | VERIFIED
+    4     |      2      | 0x8078787 |     0x8078787      | VERIFIED
+    5     |      2      | 0xE01E1E1 |     0xE01E1E1      | VERIFIED
+    6     |      2      | 0x7807878 |     0x7807878      | VERIFIED
+    7     |      2      | 0x1E01E1E |     0x1E01E1E      | VERIFIED
+    8     |      2      | 0x8780787 |     0x8780787      | VERIFIED
+    9     |      1      | 0xC3C03C3 |     0xC3C03C3      | VERIFIED
+   10     |      2      | 0xF0F00F0 |     0xF0F00F0      | VERIFIED
+   11     |      2      | 0x3C3C03C |     0x3C3C03C      | VERIFIED
+   12     |      2      | 0x0F0F00F |     0x0F0F00F      | VERIFIED
+   13     |      2      | 0xC3C3C03 |     0xC3C3C03      | VERIFIED
+   14     |      2      | 0xF0F0F00 |     0xF0F0F00      | VERIFIED
+   15     |      2      | 0x3C3C3C0 |     0x3C3C3C0      | VERIFIED
+   16     |      1      | 0x1E1E1E0 |     0x1E1E1E0      | VERIFIED
+----------------------------------------------------------------
+
+Result: [DES REVERSE DECRYPTION KEY SCHEDULE PERFECTLY VERIFIED]

@@ -1,0 +1,48 @@
+====================================================
+ CSA5117 - PROGRAM 36: AFFINE BIJECTIVITY PROOF
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Testing Bijectivity for all 'a' in [0 .. 25] with b = 3:
+
+Multiplier a | gcd(a, 26) | Bijective? | First Collision Example
+-------------------------------------------------------------------
+      0      |     26     |   NO       | E(0) = E(1) = 3
+      1      |      1     |   YES      | None (1-to-1 Permutation)
+      2      |      2     |   NO       | E(0) = E(13) = 3
+      3      |      1     |   YES      | None (1-to-1 Permutation)
+      4      |      2     |   NO       | E(0) = E(13) = 3
+      5      |      1     |   YES      | None (1-to-1 Permutation)
+      6      |      2     |   NO       | E(0) = E(13) = 3
+      7      |      1     |   YES      | None (1-to-1 Permutation)
+      8      |      2     |   NO       | E(0) = E(13) = 3
+      9      |      1     |   YES      | None (1-to-1 Permutation)
+     10      |      2     |   NO       | E(0) = E(13) = 3
+     11      |      1     |   YES      | None (1-to-1 Permutation)
+     12      |      2     |   NO       | E(0) = E(13) = 3
+     13      |     13     |   NO       | E(0) = E(2) = 3
+     14      |      2     |   NO       | E(0) = E(13) = 3
+     15      |      1     |   YES      | None (1-to-1 Permutation)
+     16      |      2     |   NO       | E(0) = E(13) = 3
+     17      |      1     |   YES      | None (1-to-1 Permutation)
+     18      |      2     |   NO       | E(0) = E(13) = 3
+     19      |      1     |   YES      | None (1-to-1 Permutation)
+     20      |      2     |   NO       | E(0) = E(13) = 3
+     21      |      1     |   YES      | None (1-to-1 Permutation)
+     22      |      2     |   NO       | E(0) = E(13) = 3
+     23      |      1     |   YES      | None (1-to-1 Permutation)
+     24      |      2     |   NO       | E(0) = E(13) = 3
+     25      |      1     |   YES      | None (1-to-1 Permutation)
+-------------------------------------------------------------------
+
+[SUMMARY OF MATHEMATICAL FINDINGS]
+  Total Allowed Multipliers   : 12  (All 'a' where gcd(a, 26) == 1)
+  Total Disallowed Multipliers: 14  (All 'a' sharing factors with 2 or 13)
+
+[SPECIAL VERIFICATION: Given Case a = 2, b = 3]
+  E(0)  = (2 * 0 + 3) mod 26  = 3  -> 'D'
+  E(13) = (2 * 13 + 3) mod 26 = 29 mod 26 = 3 -> 'D'
+  Collision Confirmed: Plaintexts 0 ('A') and 13 ('N') both encrypt to 'D'!
+  Decryption is impossible because inverse of 2 mod 26 does not exist.
+
+Result: [BIJECTIVITY THEOREM MATHEMATICALLY AND EXPERIMENTALLY PROVEN]

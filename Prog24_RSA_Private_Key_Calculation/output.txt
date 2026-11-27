@@ -1,0 +1,27 @@
+====================================================
+ CSA5117 - PROGRAM 24: RSA PRIVATE KEY CALCULATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[GIVEN PUBLIC PARAMETERS]
+  Modulus    n = 3599
+  Public Exp e = 31
+
+[STEP 1: Trial Division Factorization]
+  Trial division search up to sqrt(3599) = 59.99:
+  Found factor p = 59
+  Calculated   q = n / p = 3599 / 59 = 61
+
+[STEP 2: Euler Totient Calculation]
+  phi(n) = (p - 1) * (q - 1) = (59 - 1) * (61 - 1) = 58 * 60 = 3480
+
+[STEP 3: Extended Euclidean Algorithm for 31 * d = 1 (mod 3480)]
+  Calculated Private Key d = 3031
+  Verification: (31 * 3031) mod 3480 = 1
+
+[STEP 4: Test Encryption & Decryption]
+  Original Message M   = 123
+  Ciphertext C = M^e mod n = 733
+  Decrypted  P = C^d mod n = 123
+
+Result: [PRIVATE KEY d = 3031 PROVEN MATHEMATICALLY CORRECT]

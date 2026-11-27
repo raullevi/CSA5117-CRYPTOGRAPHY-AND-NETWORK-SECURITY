@@ -1,0 +1,15 @@
+====================================================
+ CSA5117 - PROGRAM 08: KEYWORD MONOALPHABETIC CIPHER
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+Keyword: CIPHER
+
+plain : a b c d e f g h i j k l m n o p q r s t u v w x y z
+cipher: C I P H E R A B D F G J K L M N O Q S T U V W X Y Z 
+
+[+] Original Plaintext : meet me at the secret rendezvous point
+[+] Encrypted Ciphertext: keet ke ct tbe sepqet qelhezvmus nmdlt
+[+] Decrypted Plaintext : meet me at the secret rendezvous point
+
+Result: [SUCCESS - Verified Match]

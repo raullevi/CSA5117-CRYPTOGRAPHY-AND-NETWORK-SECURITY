@@ -1,0 +1,19 @@
+====================================================
+ CSA5117 - PROGRAM 23: S-DES IN COUNTER (CTR) MODE
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Initial Counter: 00000000
+[+] Key            : 0111111101
+
+[+] CTR Encryption Process:
+  Block 1: CTR=00000000 -> E_K(CTR)=00111001 | P1=00000001 -> C1=00111000 (MATCH)
+  Block 2: CTR=00000001 -> E_K(CTR)=01001101 | P2=00000010 -> C2=01001111 (MATCH)
+  Block 3: CTR=00000010 -> E_K(CTR)=00110110 | P3=00000100 -> C3=00110010 (MATCH)
+
+[+] CTR Decryption Process:
+  Block 1: Recovered=00000001 (VERIFIED MATCH)
+  Block 2: Recovered=00000010 (VERIFIED MATCH)
+  Block 3: Recovered=00000100 (VERIFIED MATCH)
+
+Result: [S-DES CTR MODE ENCRYPTION & DECRYPTION FULLY VERIFIED]

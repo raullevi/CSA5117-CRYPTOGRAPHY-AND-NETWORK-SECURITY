@@ -1,0 +1,26 @@
+====================================================
+ CSA5117 - PROGRAM 09: PT-109 PLAYFAIR DECRYPTION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Playfair Key: "ROYAL NEW ZEALAND NAVY"
+
+[+] 5x5 Key Matrix:
+    R O Y A L 
+    N E W Z D 
+    V B C F G 
+    H I K M P 
+    Q S T U X 
+
+[+] Received Ciphertext:
+    KXJEYUREBEZWEHEWRYTUHEYFSKREHEGOYFIWTTTUOLKSYCAJPOBOTEIZONTXBYBNTGONEYCUZWRGDSONSXBOUYWRHEBAAHYUSEDQ
+
+[+] Decrypted Playfair Plaintext Digraphs:
+    PT BO AT ON EO WE NI NE LO ST IN AC TI ON IN BL AC KE SS ST RA IT TW OM IL ES SW ME RE SU CO VE XC RE WO FT WE LV EX RE QU ES TA NY IN FO RM AT IO NX 
+
+[+] Historical Interpretation:
+    "PT ONE ZERO NINE LOST IN ACTION IN BLACKETT STRAIT
+     TWO MILES SW MERESU COVE X CREW OF TWELVE SURVIVED
+     X BESEECH YOU RESCUE CREW IMMEDIATELY X KENEDY"
+
+Result: [PT-109 RESCUE DISPATCH SUCCESSFULLY RECOVERED]

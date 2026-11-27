@@ -1,0 +1,26 @@
+====================================================
+ CSA5117 - PROGRAM 34: PADDING MOTIVATION ANALYSIS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[SCENARIO 1: FLAGGED AMBIGUITY WITHOUT DUMMY PADDING BLOCK]
+  Legitimate message ends in byte 0x80: 46 49 4C 45 44 41 54 80 
+  If sender does NOT pad because length is already 8 bytes:
+  Receiver runs depadder: detects 0x80 at end -> Strips byte 8!
+  Corrupted Message (7 bytes): 46 49 4C 45 44 41 54 
+  ERROR: [DATA CORRUPTION OCCURRED DUE TO AMBIGUITY]
+
+[SCENARIO 2: ROBUST SCHEME WITH MANDATORY PADDING BLOCK]
+  Sender appends full dummy block (16 bytes total):
+  46 49 4C 45 44 41 54 80 80 00 00 00 00 00 00 00 
+  Receiver unambiguously strips dummy block -> Length: 8 bytes
+  46 49 4C 45 44 41 54 80 
+  SUCCESS: [ORIGINAL MESSAGE PRESERVED PERFECTLY]
+
+Formal Motivation Conclusion:
+  1. Unambiguous Parsing: Without a guaranteed padding trailer, valid message
+     data cannot be distinguished from padding bytes.
+  2. Cryptographic Reversibility: Every padding scheme must define a unique,
+     invertible function mapping {0,1}* -> ({0,1}^b)+.
+
+Result: [PADDING MOTIVATION RIGOROUSLY VALIDATED]

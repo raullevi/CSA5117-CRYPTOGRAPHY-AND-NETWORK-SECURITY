@@ -1,0 +1,27 @@
+====================================================
+ CSA5117 - PROGRAM 01: CAESAR CIPHER IMPLEMENTATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Original Plaintext: "HELLO WORLD CRYPTOGRAPHY EXPERIMENT"
+
+--- Shift Key k = 03 ---
+Ciphertext: KHOOR ZRUOG FUBSWRJUDSKB HASHULPHQW
+Decrypted:  HELLO WORLD CRYPTOGRAPHY EXPERIMENT
+Status:     [VERIFIED MATCH]
+
+--- Shift Key k = 07 ---
+Ciphertext: OLSSV DVYSK JYFWAVNYHWOF LEWLYPTLUA
+Decrypted:  HELLO WORLD CRYPTOGRAPHY EXPERIMENT
+Status:     [VERIFIED MATCH]
+
+--- Shift Key k = 13 ---
+Ciphertext: URYYB JBEYQ PELCGBTENCUL RKCREVZRAG
+Decrypted:  HELLO WORLD CRYPTOGRAPHY EXPERIMENT
+Status:     [VERIFIED MATCH]
+
+--- Shift Key k = 25 ---
+Ciphertext: GDKKN VNQKC BQXOSNFQZOGX DWODQHLDMS
+Decrypted:  HELLO WORLD CRYPTOGRAPHY EXPERIMENT
+Status:     [VERIFIED MATCH]
+

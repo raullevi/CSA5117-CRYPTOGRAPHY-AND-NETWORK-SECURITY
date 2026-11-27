@@ -1,0 +1,27 @@
+====================================================
+ CSA5117 - PROGRAM 16: MONOALPHABETIC FREQUENCY ATTACK
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Ciphertext: WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ DQG UXQV DZDB WKURXJK WKH IRUHVW
+
+[+] Top Observed Ciphertext Frequencies:
+    'R':6  'H':5  'W':5  'K':5  'U':5  'D':4  'X':4  'V':3  
+
+[+] Generating Top 10 Candidate Plaintexts (Using Frequency Alignment Heuristic):
+--------------------------------------------------------------------------------
+Rank | Likelihood | Candidate Decrypted Plaintext
+--------------------------------------------------------------------------------
+   1 |   100.0%   | AOT QSPYW GIECR UEV BSJXH EZTI AOT KNFL MED NRM ISRH NCNL AOIESDO AOT UEITHA
+   2 |    91.5%   | OIA ZHBPF YNTUD MTK VHXQR TEAN OIA JSGC WTL SDW NHDR SUSC OINTHLI OIA MTNARO
+   3 |    83.0%   | INO ERVBG PSAML WAJ KRQZD ATOS INO XHYU FAC HLF SRLD HMHU INSARCN INO WASODI
+   4 |    74.5%   | NSI TDKVY BHOWC FOX JDZEL OAIH NSI QRPM GOU RCG HDCL RWRM NSHODUS NSI FOHILN
+   5 |    66.0%   | SHN ALJKP VRIFU GIQ XLETC IONR SHN ZDBW YIM DUY RLUC DFDW SHRILMH SHN GIRNCS
+   6 |    57.5%   | HRS OCXJB KDNGM YNZ QCTAU NISD HRS ELVF PNW LMP DCMU LGLF HRDNCWR HRS YNDSUH
+   7 |    49.0%   | RDH IUQXV JLSYW PSE ZUAOM SNHL RDH TCKG BSF CWB LUWM CYCG RDLSUFD RDH PSLHMR
+   8 |    40.5%   | DLR NMZQK XCHPF BHT EMOIW HSRC DLR AUJY VHG UFV CMFW UPUY DLCHMGL DLR BHCRWD
+   9 |    32.0%   | LCD SWEZJ QURBG VRA TWINF RHDU LCD OMXP KRY MGK UWGF MBMP LCURWYC LCD VRUDFL
+  10 |    23.5%   | CUL HFTEX ZMDVY KDO AFNSG DRLM CUL IWQB JDP WYJ MFYG WVWB CUMDFPU CUL KDMLGC
+--------------------------------------------------------------------------------
+
+Result: [TOP 10 MONOALPHABETIC CANDIDATES GENERATED SUCCESSFULLY]

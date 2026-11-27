@@ -1,0 +1,17 @@
+====================================================
+ CSA5117 - PROGRAM 03: PLAYFAIR CIPHER IMPLEMENTATION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Keyword: MONARCHY
+[+] 5x5 Playfair Matrix:
+    M O N A R 
+    C H Y B D 
+    E F G I K 
+    L P Q S T 
+    U V W X Z 
+
+[+] Original Plaintext: INSTRUMENTS
+[+] Digraphs Formed   : IN ST RU ME NT SX 
+[+] Encrypted Cipher  : GATLMZCLRQXA
+[+] Result Status     : [VERIFIED SUCCESS]

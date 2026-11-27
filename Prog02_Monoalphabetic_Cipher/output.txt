@@ -1,0 +1,13 @@
+====================================================
+ CSA5117 - PROGRAM 02: MONOALPHABETIC SUBSTITUTION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+Plain Alphabet:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cipher Alphabet: QWERTYUIOPASDFGHJKLZXCVBNM
+
+[+] Original Plaintext : ATTACK AT DAWN SECURE TRANSMISSION
+[+] Encrypted Ciphertext: QZZQEA QZ RQVF LTEXKT ZKQFLDOLLOGF
+[+] Decrypted Plaintext : ATTACK AT DAWN SECURE TRANSMISSION
+
+Result: [SUCCESS - Decryption Matched Exactly]

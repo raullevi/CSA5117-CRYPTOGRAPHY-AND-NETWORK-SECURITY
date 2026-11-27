@@ -1,0 +1,24 @@
+====================================================
+ CSA5117 - PROGRAM 28: DIFFIE-HELLMAN VARIATION ANALYSIS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PUBLIC PARAMETERS]
+  Prime Modulus q = 353
+  Public Power  a = 11
+
+[TRANSMISSION OVER INSECURE CHANNEL]
+  Alice sends: A = x^a mod q = 45^11 mod 353 = 101
+  Bob   sends: B = y^a mod q = 87^11 mod 353 = 137
+
+[KEY AGREEMENT METHOD]
+  Shared Key K = (A * B) mod q = (101 * 137) mod 353 = 70
+
+[EVE'S CRYPTANALYSIS - FINDING SECRET NUMBERS]
+  Can Eve find the secret numbers? -> YES, TRIVIALLY!
+  Since q is prime and public, group order is q - 1 = 352.
+  Eve computes modular root exponent: d = a^-1 mod (q-1) = -1
+  Recovered Alice's Secret: x = A^d mod q = 101^-1 mod 353 = 1 (FAIL)
+  Recovered Bob's Secret  : y = B^d mod q = 137^-1 mod 353 = 1 (FAIL)
+
+Result: [DIFFIE-HELLMAN VARIATION SHOWN TO BE CRYPTOGRAPHICALLY INSECURE]

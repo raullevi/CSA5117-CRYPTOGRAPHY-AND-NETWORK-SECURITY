@@ -1,0 +1,25 @@
+====================================================
+ CSA5117 - PROGRAM 05: AFFINE CIPHER MATHEMATICAL ANALYSIS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PART A: Limitations on the value of 'b']
+Answer: There are NO restrictions on 'b' other than 0 <= b <= 25.
+        'b' is a pure additive shift. Any integer b mod 26 preserves bijectivity.
+
+[PART B: Disallowed values of 'a']
+Requirement: gcd(a, 26) must be 1. Factors of 26 are 2 and 13.
+Disallowed values of 'a' in [0, 25]:
+  0 2 4 6 8 10 12 13 14 16 18 20 22 24 
+Total disallowed values: 14
+
+Allowed values of 'a' (phi(26) = 12):
+  1 3 5 7 9 11 15 17 19 21 23 25 
+Total allowed values: 12
+
+[DEMONSTRATION: Valid Affine Cipher with a = 7, b = 2]
+Multiplicative inverse of 7 mod 26 is: 15
+Plaintext : AFFINECIPHER
+Ciphertext: CLLGPEQGDZER
+Decrypted : AFFINECIPHER
+Bijectivity: [VERIFIED ONE-TO-ONE MAPPING]

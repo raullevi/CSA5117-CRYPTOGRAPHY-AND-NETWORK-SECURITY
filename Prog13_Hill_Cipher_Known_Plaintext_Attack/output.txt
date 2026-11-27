@@ -1,0 +1,22 @@
+====================================================
+ CSA5117 - PROGRAM 13: HILL CIPHER CRYPTANALYSIS
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[PART 1: Known Plaintext Attack (KPA)]
+Known Plaintext Matrix P:  [[ 7, 8 ], [ 11, 11 ]]
+Observed Ciphertext Matrix C: [[ 25, 6 ], [ 24, 17 ]]
+
+det(P) = 15, det(P)^-1 mod 26 = 7
+Recovered Key Matrix via P^-1 * C:
+  K_rec = [[ 9, 4 ], [ 5, 7 ]]
+
+[PART 2: Chosen Plaintext Attack (CPA)]
+Attacker chooses basis vectors (Identity Matrix):
+  Block 1: 'BA' -> (1, 0)
+  Block 2: 'AB' -> (0, 1)
+Since C = I * K mod 26 = K mod 26, the ciphertext directly equals the key!
+  C_block1 = (1*K00 + 0*K10, 1*K01 + 0*K11) = (9, 4)
+  C_block2 = (0*K00 + 1*K10, 0*K01 + 1*K11) = (5, 7)
+
+Result: [HILL CIPHER COMPLETELY BROKEN UNDER KPA AND CPA]

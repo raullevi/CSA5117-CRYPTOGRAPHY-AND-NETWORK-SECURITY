@@ -1,0 +1,31 @@
+====================================================
+ CSA5117 - PROGRAM 29: SHA-3 CAPACITY DIFFUSION
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] SHA-3 SPONGE STATE GEOMETRY (r = 1024 bits, c = 576 bits)
+    Total State = 1600 bits = 25 lanes (5x5 matrix of 64-bit words)
+    Rate     r  = 16 lanes (first 16 lanes of message block P0)
+    Capacity c  =  9 lanes (remaining 9 lanes initialized to 0)
+
+[+] Initial State Matrix (0 = Zero Capacity Lane, Non-Zero = Rate Lane):
+    Row 0: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 1: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 2: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 3: [NON-ZERO]  [0000 ZERO] [0000 ZERO] [0000 ZERO] [0000 ZERO] 
+    Row 4: [0000 ZERO] [0000 ZERO] [0000 ZERO] [0000 ZERO] [0000 ZERO] 
+
+[+] State Matrix AFTER 1 ROUND OF THETA STEP:
+    Row 0: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 1: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 2: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 3: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+    Row 4: [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  [NON-ZERO]  
+
+Analysis Conclusion:
+  How long before all capacity lanes have at least one nonzero bit?
+  ANSWER: EXACTLY 1 ROUND.
+  The Theta (theta) transformation diffuses column parities across all rows,
+  causing every single capacity lane to absorb nonzero bits in the very first round!
+
+Result: [DIFFUSION PROVEN IN EXACTLY 1 ROUND]

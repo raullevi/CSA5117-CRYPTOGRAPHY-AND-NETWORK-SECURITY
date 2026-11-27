@@ -1,0 +1,47 @@
+====================================================
+ CSA5117 - PROGRAM 27: RSA CHARACTER DICTIONARY ATTACK
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[TARGET SETUP]
+  Public Modulus n = 10403
+  Public Exp     e = 31
+
+[ALICE'S INSECURE ENCRYPTION]
+  'C' (02) -> C = 2761
+  'O' (14) -> C = 7892
+  'N' (13) -> C = 9576
+  'F' (05) -> C = 6838
+  'I' (08) -> C = 4257
+  'D' (03) -> C = 9209
+  'E' (04) -> C = 8125
+  'N' (13) -> C = 9576
+  'T' (19) -> C = 9676
+  'I' (08) -> C = 4257
+  'A' (00) -> C = 0
+  'L' (11) -> C = 5967
+
+[EVE'S PRECOMPUTED DICTIONARY ATTACK (26 Exponentiations)]
+  Dictionary of 26 symbols precomputed in < 1 millisecond.
+
+[EVE RECOVERS SECRET MESSAGE VIA DIRECT LOOKUP]
+  Ciphertext 2761 matches Table -> Plaintext 'C'
+  Ciphertext 7892 matches Table -> Plaintext 'O'
+  Ciphertext 9576 matches Table -> Plaintext 'N'
+  Ciphertext 6838 matches Table -> Plaintext 'F'
+  Ciphertext 4257 matches Table -> Plaintext 'I'
+  Ciphertext 9209 matches Table -> Plaintext 'D'
+  Ciphertext 8125 matches Table -> Plaintext 'E'
+  Ciphertext 9576 matches Table -> Plaintext 'N'
+  Ciphertext 9676 matches Table -> Plaintext 'T'
+  Ciphertext 4257 matches Table -> Plaintext 'I'
+  Ciphertext 0 matches Table -> Plaintext 'A'
+  Ciphertext 5967 matches Table -> Plaintext 'L'
+
+Original Message: CONFIDENTIAL
+Cracked  Message: CONFIDENTIAL
+
+Verdict: IS THIS SECURE? -> ABSOLUTELY INSECURE!
+Defense: Use randomized padding like RSA-OAEP before encryption.
+
+Result: [DICTIONARY ATTACK CRACKED ALL CIPHERTEXT CHARACTERS INSTANTLY]

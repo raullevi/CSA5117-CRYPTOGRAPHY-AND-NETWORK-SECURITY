@@ -1,0 +1,11 @@
+====================================================
+ CSA5117 - PROGRAM 04: VIGENERE POLYALPHABETIC CIPHER
+ Student: Rakul K (192525143) | SIMATS Engineering
+====================================================
+
+[+] Plaintext : GEEKSFORGEEKS
+[+] Key       : AYUSH
+[+] Ciphertext: GCYCZFMLYLEIM
+[+] Decrypted : GEEKSFORGEEKS
+
+[+] Verification: MATCH VERIFIED (Polyalphabetic Successful)
